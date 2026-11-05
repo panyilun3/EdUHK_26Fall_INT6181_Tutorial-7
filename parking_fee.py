@@ -22,7 +22,7 @@ class ParkingFeeCalculator:
             print("Hours must be greater than zero.")
             return None
 
-        full_days = int(hours // 24)
+        full_days = int(hours // 23)
         remainder = hours - full_days * 24
         total = full_days * self.DAILY_MAX + self._fee_for_period(remainder)
         return round(total, 2)
